@@ -7,7 +7,6 @@ from page.actions import *
 
 config = dotenv_values(".env")
 
-browser = Selenium()
 file_system = FileSystem()
 url = config.get('DOMAIN')
 excel_name = config.get('EXCEL')
@@ -17,7 +16,7 @@ output = config.get('OUTPUT')
 app = Application()
 excel = Files()
 fs = FileSystem()
-SECONDS = '30 seconds'
+browser = Selenium()
 
 
 def store_web_page_content():
@@ -25,7 +24,7 @@ def store_web_page_content():
     setup_browser(browser, url, output)
     expand_agency(browser)
     table = get_table(browser)
-    append_excel(output + '/' + excel_name, table, WORKSHEET_AG, True)
+    append_excel(output + '/' + excel_name, table, worksheet_ag, True)
     navigate_agencia(browser, agencia)
     individual_investments = extract_individual_investments(browser)
     res = json.loads(individual_investments.to_json(orient='records'))

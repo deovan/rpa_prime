@@ -19,7 +19,7 @@ def link_details_ag(agencia):
     return 'xpath://*[contains(text(),"' + agencia + '")]'
 
 
-WORKSHEET_AG = "Agências"
+worksheet_ag = "Agências"
 
 link_home = "#home-dive-in"
 
