@@ -5,8 +5,6 @@ from dotenv import dotenv_values
 
 from page.actions import *
 
-path_excel = output + '/' + excel_name
-
 config = dotenv_values(".env")
 
 file_system = FileSystem()
@@ -14,6 +12,7 @@ url = config.get('DOMAIN')
 excel_name = config.get('EXCEL')
 agencia = config.get('AGENCIA')
 output = config.get('OUTPUT')
+path_excel = output + '/' + excel_name
 
 app = Application()
 excel = Files()
