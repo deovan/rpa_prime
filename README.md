@@ -10,7 +10,7 @@
 Criar o env com base no arquivo do projeto
 
 ```
-  $ conda env create -f .\environment.yml --force
+  $ conda env create -f environment.yml --force
 ```
 
 Ativar env criado
