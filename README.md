@@ -24,6 +24,7 @@ Ativar env criado
 Para rodar configurações personalizadas é possivel ajustar as constantes utilizadas no projeto
 
 Ex:
+
 ```
 # Development settings
 DOMAIN=https://itdashboard.gov/
